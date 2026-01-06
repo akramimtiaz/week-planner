@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { CheckCheck, House, SquareCheckBig, Calendar } from 'lucide-vue-next';
+import { CheckCheck, House, SquareCheckBig, Calendar } from 'lucide-vue-next';
 </script>
 
 <template>
@@ -11,17 +11,23 @@
 
         <nav class="flex flex-row">
             <ul class="flex flex-row gap-8">
-                <li class="flex flex-row gap-2 items-center">
-                    <House :size="16" />
-                    <span>Home</span>
+                <li>
+                    <a href="/" class="flex flex-row gap-2 items-center">
+                        <House :size="16" />
+                        <span>Home</span>
+                    </a>
                 </li>
-                <li class="flex flex-row gap-2 items-center">
-                    <SquareCheckBig :size="16" />
-                    <span>Tasks</span>
+                <li>
+                    <a href="/tasks" class="flex flex-row gap-2 items-center">
+                        <SquareCheckBig :size="16" />
+                        <span>Tasks</span>
+                    </a>
                 </li>
-                <li class="flex flex-row gap-2 items-center">
-                    <Calendar :size="16" />
-                    <span>Planner</span>
+                <li>
+                    <a href="/planner" class="flex flex-row gap-2 items-center">
+                        <Calendar :size="16" />
+                        <span>Planner</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -29,7 +35,7 @@
 </template>
 
 <style scoped>
-    .nav-title {
-        color: #121929;
-    }
+.nav-title {
+    color: #121929;
+}
 </style>
